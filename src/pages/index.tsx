@@ -56,7 +56,7 @@ export default function Home() {
           <p className="text-md font-bold mt-5">Computer Science<span className="pl-2 font-normal text-sm">( Not finished ) </span></p>
           <p className="mb-5 text-sm">Instituto Federal do Espirito Santo</p>
         </div>
-        <div>
+        <div className="mb-5">
           <h2 className="mt-15 text-xl font-bold">Main Skills</h2>
           <ul className="list-disc list-inside mt-5">
             <li>React, NextJS, NodeJS</li>
