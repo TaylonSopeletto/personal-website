@@ -28,38 +28,53 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h2 className="mt-15 text-xl font-bold">Experience</h2>
-      <p className="text-md font-bold mt-5">Bucksense<span className="pl-2 font-normal text-sm">( 2022 - moment ) </span></p>
-      <p className="mb-5 text-sm">New York - United States</p>
-      <ul className="list-disc list-inside">
-        <li>Maintanance of e-commerce websites</li>
-        <li>Creating server side pages using NextJS</li>
-        <li>Working with Algolia to create a detailed search system</li>
-        <li>Working with Sanity as a CMS</li>
-        <li>Development of UI using React, NodeJS and Tailwind</li>
-      </ul>
-      <p className="text-md font-bold mt-5">NeoApp<span className="pl-2 font-normal text-sm">( 2020 - 2022 ) </span></p>
-      <p className="mb-5 text-sm">Cachoeiro de Itapemirim - Brazil</p>
-      <ul className="list-disc list-inside">
-        <li>Maintanance of e-commerce websites</li>
-        <li>Training AI models using TensorFlow</li>
-        <li>Development of UI using React, NodeJS and Tailwind</li>
-      </ul>
+     <div className="sm:grid sm:grid-cols-2">
+      <div>
+        <h2 className="mt-15 text-xl font-bold">Experience</h2>
+          <p className="text-lg font-bold mt-5">Bucksense<span className="pl-2 font-normal text-sm">( 2022 - Ongoing ) </span></p>
+          <p className="mb-5 text-sm">New York - United States</p>
+          <ul className="list-disc list-inside">
+            <li>Maintanance of e-commerce websites</li>
+            <li>Creating server side pages using NextJS</li>
+            <li>Working with Algolia to create a detailed search system</li>
+            <li>Working with Sanity as a CMS</li>
+            <li>Development of UI using React, NodeJS and Tailwind</li>
+          </ul>
+          <p className="text-lg font-bold mt-5">NeoApp<span className="pl-2 font-normal text-sm">( 2020 - 2022 ) </span></p>
+          <p className="mb-5 text-sm">Cachoeiro de Itapemirim - Brazil</p>
+          <ul className="list-disc list-inside">
+            <li>Maintanance of e-commerce websites</li>
+            <li>Training AI models using TensorFlow</li>
+            <li>Development of UI using React, NodeJS and Tailwind</li>
+          </ul>
+        </div>
+        <div className="col-start-2 ml-auto">
+          <h2 className="mt-15 text-xl font-bold">Languages</h2>
+          <p className="text-md font-bold mt-5">English</p>
+          <p className="mb-5 text-sm">Advanced</p>
 
-      <h2 className="mt-15 text-xl font-bold">Languages</h2>
-      <p className="text-md font-bold mt-5">English</p>
-      <p className="mb-5 text-sm">Advanced</p>
+          <p className="text-md font-bold mt-5">Portuguese</p>
+          <p className="mb-5 text-sm">Fluent / Native</p>
 
-      <p className="text-md font-bold mt-5">Portuguese</p>
-      <p className="mb-5 text-sm">Fluent / Native</p>
+          <h2 className="mt-15 text-xl font-bold">Education</h2>
+          <p className="text-md font-bold mt-5">Data Science<span className="pl-2 font-normal text-sm">( 2024 - Ongoing ) </span></p>
+          <p className="mb-5 text-sm">Descomplica</p>
 
-      <h2 className="mt-15 text-xl font-bold">Education</h2>
-      <p className="text-md font-bold mt-5">Data Science<span className="pl-2 font-normal text-sm">( 2024 - moment ) </span></p>
-      <p className="mb-5 text-sm">Descomplica</p>
-
-      <p className="text-md font-bold mt-5">Computer Science<span className="pl-2 font-normal text-sm">( incomplete ) </span></p>
-      <p className="mb-5 text-sm">Instituto Federal do Espirito Santo</p>
-     
+          <p className="text-md font-bold mt-5">Computer Science<span className="pl-2 font-normal text-sm">( Not finished ) </span></p>
+          <p className="mb-5 text-sm">Instituto Federal do Espirito Santo</p>
+        </div>
+        <div>
+          <h2 className="mt-15 text-xl font-bold">Main Skills</h2>
+          <ul className="list-disc list-inside mt-5">
+            <li>React, NextJS, NodeJS</li>
+            <li>Typescript, Javascript</li>
+            <li>HTML5, CSS</li>
+            <li>Styled components, Tailwind, Sass</li>
+            <li>SwiftUI</li>
+            <li>Python and Django</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
