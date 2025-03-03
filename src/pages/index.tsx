@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +14,10 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>Taylon Sopeletto</title>
+    </Head>
     <div className="w-[90%] max-w-[1200px] m-auto">
       <div className="mt-10 flex justify-between">
         <div className="sm:flex gap-10">
@@ -76,5 +81,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
