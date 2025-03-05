@@ -7,19 +7,22 @@ export default function Home() {
       <title>Taylon Sopeletto</title>
     </Head>
     <div className="w-[90%] max-w-[1200px] m-auto">
-      <div className="mt-10 flex justify-between">
-        <div className="sm:flex gap-10">
-          <img className="h-auto sm:h-60 w-full sm:w-auto object-cover rounded-xl" src="https://avatars.githubusercontent.com/u/42319708?v=4"/>
-          <div className="flex flex-col gap-5 sm:h-full justify-center">
-            <h1 className="mt-6 sm:mt-0 text-xl font-bold">Taylon Sopeletto</h1>
-            <p className="text-lg">Full stack developer with a focus on front-end</p>
-            <div className="flex flex-wrap gap-5">
-              <a className="hover:underline hover:text-gray-100" href="http://linkedin.com/in/taylon-sopeletto-a1916317a"><i className="fa-brands fa-linkedin mr-3"></i>LinkedIn</a>
-              <a className="hover:underline hover:text-gray-100" href="http://github.com/TaylonSopeletto"><i className="fa-brands fa-github mr-3"></i>GitHub</a>
-              <a className="hover:underline hover:text-gray-100" href="mailto:gtataylon@gmail.com"><i className="fa-brands fa-google mr-3"></i>gtataylon@gmail.com</a>
+      <div className="mt-10 flex">
+        <div className="flex gap-5 w-full">
+          <img className="h-30 sm:w-auto object-cover rounded-xl" src="https://avatars.githubusercontent.com/u/42319708?v=4"/>
+          <div className="flex flex-col gap-2 sm:h-full w-full">
+            <div className="w-full flex justify-between">
+              <h1 className="sm:mt-0 text-xl sm:text-2xl font-bold">Taylon Sopeletto</h1>
+              <p>English</p>
             </div>
+            <p className="text-lg">Full stack developer with a focus on front-end</p>
           </div>
         </div>
+      </div>
+      <div className="flex flex-wrap gap-5 mt-10">
+        <a className="hover:underline hover:text-gray-100" href="http://linkedin.com/in/taylon-sopeletto-a1916317a"><i className="fa-brands fa-linkedin mr-3"></i>LinkedIn</a>
+        <a className="hover:underline hover:text-gray-100" href="http://github.com/TaylonSopeletto"><i className="fa-brands fa-github mr-3"></i>GitHub</a>
+        <a className="hover:underline hover:text-gray-100" href="mailto:gtataylon@gmail.com"><i className="fa-brands fa-google mr-3"></i>gtataylon@gmail.com</a>
       </div>
      <div className="sm:grid sm:grid-cols-2">
       <div>
@@ -41,7 +44,7 @@ export default function Home() {
             <li>Development of UI using React, NodeJS and Tailwind</li>
           </ul>
         </div>
-        <div className="col-start-2 ml-auto">
+        <div className="col-start-2 text-right">
           <h2 className="mt-15 text-xl font-bold">Languages</h2>
           <p className="text-md font-bold mt-5">English</p>
           <p className="mb-5 text-sm">Advanced</p>
