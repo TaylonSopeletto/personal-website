@@ -34,8 +34,8 @@ export default function Home() {
       </div>
      <div className="sm:grid sm:grid-cols-2">
       <div>
-        <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Experience' : 'Experiencia'}</h2>
-          <p className="text-lg font-bold mt-5">Bucksense<span className="pl-2 font-normal text-sm">( 2022 - Ongoing ) </span></p>
+        <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Experience' : 'Experiência'}</h2>
+          <p className="text-lg font-bold mt-5">Bucksense<span className="pl-2 font-normal text-sm">( 2022 - {taylonSopeletto.ongoing[language]} ) </span></p>
           <p className="mb-5 text-sm">{taylonSopeletto.bucksense.location[language]}</p>
           <ul className="list-disc list-inside">
             {taylonSopeletto.bucksense.roles[language].map((item, index) => 
@@ -51,22 +51,22 @@ export default function Home() {
           </ul>
         </div>
         <div className="col-start-2 sm:text-right">
-          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Languages' : 'Linguas'}</h2>
-          <p className="text-md font-bold mt-5">{language === 'english' ? 'English' : 'Ingles'}</p>
-          <p className="mb-5 text-sm">{language === 'english' ? 'Advanced' : 'Avancado'}</p>
+          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Languages' : 'Línguas'}</h2>
+          <p className="text-md font-bold mt-5">{language === 'english' ? 'English' : 'Inglês'}</p>
+          <p className="mb-5 text-sm">{language === 'english' ? 'Advanced' : 'Avançado'}</p>
 
-          <p className="text-md font-bold mt-5">{language === 'english' ? 'Portuguese' : 'Portugues'}</p>
+          <p className="text-md font-bold mt-5">{language === 'english' ? 'Portuguese' : 'Português'}</p>
           <p className="mb-5 text-sm">{language === 'english' ? 'Fluent / Native' : 'Fluente / Nativo'}</p>
 
-          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Education' : 'Educacao'}</h2>
-          <p className="text-md font-bold mt-5">Data Science<span className="pl-2 font-normal text-sm">( 2024 - Ongoing ) </span></p>
+          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Education' : 'Educação'}</h2>
+          <p className="text-md font-bold mt-5">{language === 'english' ? 'Data science' : 'Ciência de dados'}<span className="pl-2 font-normal text-sm">( 2024 - {taylonSopeletto.ongoing[language]} ) </span></p>
           <p className="mb-5 text-sm">Descomplica</p>
 
-          <p className="text-md font-bold mt-5">Computer Science<span className="pl-2 font-normal text-sm">( Not finished ) </span></p>
+          <p className="text-md font-bold mt-5">{language === 'english' ? 'Computer science' : 'Ciência da computaçäo'}<span className="pl-2 font-normal text-sm">( {taylonSopeletto.notFinished[language]} ) </span></p>
           <p className="mb-5 text-sm">Instituto Federal do Espirito Santo</p>
         </div>
         <div className="mb-5">
-          <h2 className="mt-15 text-xl font-bold">Main Skills</h2>
+          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Main skills' : 'Principais habilidades'}</h2>
           <ul className="list-disc list-inside mt-5">
             <li>React, NextJS, NodeJS</li>
             <li>Typescript, Javascript</li>

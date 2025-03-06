@@ -1,7 +1,15 @@
 export const taylonSopeletto = {
+    ongoing: {
+        english: 'Ongoing',
+        portuguese: 'Em progresso'
+    },
+    notFinished: {
+        english: 'Not finished',
+        portuguese: 'Não finalizado'
+    },
     description: {
         english: 'Full stack developer with a focus on front-end',
-        portuguese: 'Desenvolvedor full stack com enfase em front-end'
+        portuguese: 'Desenvolvedor full stack com ênfase em front-end'
     },
     bucksense: {
         location: {
@@ -11,16 +19,16 @@ export const taylonSopeletto = {
         roles: {
             english: [
                 'Maintanance of e-commerce websites',
-                'Creating server side pages using NextJS',
-                'Working with Algolia to create a detailed search system',
+                'Server side pages creation using NextJS',
+                'Searching system with Algolia',
                 'Working with Sanity as a CMS',
                 'Development of UI using React, NodeJS and Tailwind'
             ],
             portuguese: [
                 'Manutenção de sites de e-commerce',
-                'Criando páginas do lado do servidor usando NextJS',
-                'Trabalhando com Algolia para criar um sistema de busca detalhado',
-                'Trabalhando com Sanity como CMS',
+                'Criacão de páginas do lado do servidor usando NextJS',
+                'Criação de sistemas de busca com Algolia',
+                'Integração de página com Sanity CMS',
                 'Desenvolvimento de UI usando React, NodeJS e Tailwind'
             ]
         }
