@@ -1,58 +1,64 @@
+import { taylonSopeletto } from "@/content/content";
 import Head from "next/head";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [language, setLanguege] = useState<'english' | 'portuguese'>('english')
+
   return (
     <>
     <Head>
       <title>Taylon Sopeletto</title>
     </Head>
     <div className="w-[90%] max-w-[1200px] m-auto">
+      <div className="w-full flex ml-auto mt-5">
+        <div className="ml-auto flex gap-5">
+          <p onClick={() => setLanguege('english')} className="hover:text-gray-400 hover:cursor-pointer">English</p>
+          <p onClick={() => setLanguege('portuguese')} className="hover:text-gray-400 hover:cursor-pointer">Portuguese</p>
+        </div>
+      </div>
       <div className="mt-10 flex">
         <div className="flex gap-5 w-full">
           <img className="h-30 sm:w-auto object-cover rounded-xl" src="https://avatars.githubusercontent.com/u/42319708?v=4"/>
           <div className="flex flex-col gap-2 sm:h-full w-full">
-            <div className="w-full flex justify-between">
-              <h1 className="sm:mt-0 text-xl sm:text-2xl font-bold">Taylon Sopeletto</h1>
-              <p>English</p>
-            </div>
-            <p className="text-lg">Full stack developer with a focus on front-end</p>
+            <h1 className="sm:mt-0 text-xl sm:text-2xl font-bold">Taylon Sopeletto</h1>
+            <p className="text-lg">{taylonSopeletto.description[language] ?? ''}</p>
           </div>
         </div>
       </div>
       <div className="flex flex-wrap gap-5 mt-10">
-        <a className="hover:underline hover:text-gray-100" href="http://linkedin.com/in/taylon-sopeletto-a1916317a"><i className="fa-brands fa-linkedin mr-3"></i>LinkedIn</a>
-        <a className="hover:underline hover:text-gray-100" href="http://github.com/TaylonSopeletto"><i className="fa-brands fa-github mr-3"></i>GitHub</a>
-        <a className="hover:underline hover:text-gray-100" href="mailto:gtataylon@gmail.com"><i className="fa-brands fa-google mr-3"></i>gtataylon@gmail.com</a>
+        <a className="hover:underline hover:text-gray-400" href="http://linkedin.com/in/taylon-sopeletto-a1916317a"><i className="fa-brands fa-linkedin mr-3"></i>LinkedIn</a>
+        <a className="hover:underline hover:text-gray-400" href="http://github.com/TaylonSopeletto"><i className="fa-brands fa-github mr-3"></i>GitHub</a>
+        <a className="hover:underline hover:text-gray-400" href="mailto:gtataylon@gmail.com"><i className="fa-brands fa-google mr-3"></i>gtataylon@gmail.com</a>
       </div>
      <div className="sm:grid sm:grid-cols-2">
       <div>
-        <h2 className="mt-15 text-xl font-bold">Experience</h2>
+        <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Experience' : 'Experiencia'}</h2>
           <p className="text-lg font-bold mt-5">Bucksense<span className="pl-2 font-normal text-sm">( 2022 - Ongoing ) </span></p>
-          <p className="mb-5 text-sm">New York - United States</p>
+          <p className="mb-5 text-sm">{taylonSopeletto.bucksense.location[language]}</p>
           <ul className="list-disc list-inside">
-            <li>Maintanance of e-commerce websites</li>
-            <li>Creating server side pages using NextJS</li>
-            <li>Working with Algolia to create a detailed search system</li>
-            <li>Working with Sanity as a CMS</li>
-            <li>Development of UI using React, NodeJS and Tailwind</li>
+            {taylonSopeletto.bucksense.roles[language].map((item, index) => 
+              <li key={index}>{item}</li>
+            )}
           </ul>
           <p className="text-lg font-bold mt-5">NeoApp<span className="pl-2 font-normal text-sm">( 2020 - 2022 ) </span></p>
-          <p className="mb-5 text-sm">Cachoeiro de Itapemirim - Brazil</p>
+          <p className="mb-5 text-sm">{taylonSopeletto.neoapp.location[language]}</p>
           <ul className="list-disc list-inside">
-            <li>Maintanance of e-commerce websites</li>
-            <li>Training AI models using TensorFlow</li>
-            <li>Development of UI using React, NodeJS and Tailwind</li>
+            {taylonSopeletto.neoapp.roles[language].map((item, index) => 
+              <li key={index}>{item}</li>
+            )}
           </ul>
         </div>
-        <div className="col-start-2 text-right">
-          <h2 className="mt-15 text-xl font-bold">Languages</h2>
-          <p className="text-md font-bold mt-5">English</p>
-          <p className="mb-5 text-sm">Advanced</p>
+        <div className="col-start-2 sm:text-right">
+          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Languages' : 'Linguas'}</h2>
+          <p className="text-md font-bold mt-5">{language === 'english' ? 'English' : 'Ingles'}</p>
+          <p className="mb-5 text-sm">{language === 'english' ? 'Advanced' : 'Avancado'}</p>
 
-          <p className="text-md font-bold mt-5">Portuguese</p>
-          <p className="mb-5 text-sm">Fluent / Native</p>
+          <p className="text-md font-bold mt-5">{language === 'english' ? 'Portuguese' : 'Portugues'}</p>
+          <p className="mb-5 text-sm">{language === 'english' ? 'Fluent / Native' : 'Fluente / Nativo'}</p>
 
-          <h2 className="mt-15 text-xl font-bold">Education</h2>
+          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Education' : 'Educacao'}</h2>
           <p className="text-md font-bold mt-5">Data Science<span className="pl-2 font-normal text-sm">( 2024 - Ongoing ) </span></p>
           <p className="mb-5 text-sm">Descomplica</p>
 
