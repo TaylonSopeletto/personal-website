@@ -1,21 +1,48 @@
 import { taylonSopeletto } from "@/content/content";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
   const [language, setLanguege] = useState<'english' | 'portuguese'>('english')
 
+  const brazilTimezones = [
+    'America/Noronha',
+    'America/Belem',
+    'America/Fortaleza',
+    'America/Recife',
+    'America/Araguaina',
+    'America/Maceio',
+    'America/Bahia',
+    'America/Sao_Paulo',
+    'America/Campo_Grande',
+    'America/Cuiaba',
+    'America/Santarem',
+    'America/Porto_Velho',
+    'America/Boa_Vista',
+    'America/Manaus',
+    'America/Eirunepe',
+    'America/Rio_Branco'
+  ];
+
+  useEffect(() => {
+    if(brazilTimezones.includes(Intl.DateTimeFormat().resolvedOptions().timeZone)){
+      setLanguege('portuguese')
+    }else{
+      setLanguege('english')
+    }
+  }, [])
+  
   return (
     <>
     <Head>
       <title>Taylon Sopeletto</title>
     </Head>
-    <div className="w-[90%] max-w-[1200px] m-auto">
+    <div className="w-[90%] max-w-[600px] m-auto">
       <div className="w-full flex ml-auto mt-5">
-        <div className="ml-auto flex gap-5">
+        <div className="flex gap-5">
           <p onClick={() => setLanguege('english')} className="hover:text-gray-400 hover:cursor-pointer">English</p>
-          <p onClick={() => setLanguege('portuguese')} className="hover:text-gray-400 hover:cursor-pointer">Portuguese</p>
+          <p onClick={() => setLanguege('portuguese')} className="hover:text-gray-400 hover:cursor-pointer">Português</p>
         </div>
       </div>
       <div className="mt-10 flex">
@@ -32,7 +59,7 @@ export default function Home() {
         <a className="hover:underline hover:text-gray-400" href="http://github.com/TaylonSopeletto"><i className="fa-brands fa-github mr-3"></i>GitHub</a>
         <a className="hover:underline hover:text-gray-400" href="mailto:gtataylon@gmail.com"><i className="fa-brands fa-google mr-3"></i>gtataylon@gmail.com</a>
       </div>
-     <div className="sm:grid sm:grid-cols-2">
+     <div className="flex flex-col">
       <div>
         <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Experience' : 'Experiência'}</h2>
           <p className="text-lg font-bold mt-5">Bucksense<span className="pl-2 font-normal text-sm">( 2022 - {taylonSopeletto.ongoing[language]} ) </span></p>
@@ -50,7 +77,18 @@ export default function Home() {
             )}
           </ul>
         </div>
-        <div className="col-start-2 sm:text-right">
+        <div className="mb-5">
+          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Main skills' : 'Principais habilidades'}</h2>
+          <ul className="list-disc list-inside mt-5">
+            <li>React, NextJS, NodeJS</li>
+            <li>Typescript, Javascript</li>
+            <li>HTML5, CSS</li>
+            <li>Styled components, Tailwind, Sass</li>
+            <li>SwiftUI</li>
+            <li>Python and Django</li>
+          </ul>
+        </div>
+        <div className="col-start-2">
           <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Languages' : 'Línguas'}</h2>
           <p className="text-md font-bold mt-5">{language === 'english' ? 'English' : 'Inglês'}</p>
           <p className="mb-5 text-sm">{language === 'english' ? 'Advanced' : 'Avançado'}</p>
@@ -65,17 +103,7 @@ export default function Home() {
           <p className="text-md font-bold mt-5">{language === 'english' ? 'Computer science' : 'Ciência da computaçäo'}<span className="pl-2 font-normal text-sm">( {taylonSopeletto.notFinished[language]} ) </span></p>
           <p className="mb-5 text-sm">Instituto Federal do Espirito Santo</p>
         </div>
-        <div className="mb-5">
-          <h2 className="mt-15 text-xl font-bold">{language === 'english' ? 'Main skills' : 'Principais habilidades'}</h2>
-          <ul className="list-disc list-inside mt-5">
-            <li>React, NextJS, NodeJS</li>
-            <li>Typescript, Javascript</li>
-            <li>HTML5, CSS</li>
-            <li>Styled components, Tailwind, Sass</li>
-            <li>SwiftUI</li>
-            <li>Python and Django</li>
-          </ul>
-        </div>
+       
       </div>
     </div>
     </>
